@@ -1,0 +1,5 @@
+<h1>Welcome <%= name %></h1>
+<small>Your Password is <% hashedPassword %></small>
+<form action="/logout?_method=DELETE" method="POST">
+    <button type="submit">Log Out</button>
+</form>

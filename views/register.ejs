@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Register</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/static/main.css">
+    <script src="/project/assets/script.js"></script>
+</head>
+
+
+<body>
+    <% if (messages.error) { %>%>
+        <h2 class="error-handling">Oops, please correct the following:</h2>
+        <ul class="error-list">messages.error</ul>
+    <%} %>
+    <div class="register-form">
+        <form action="/register" method="POST" id=form>
+            <h2 class="text-center">Register as a new user</h2>
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Username" required="required" name="username" id="username">
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Email" required="required" name="email" id="email">
+            </div>
+            <div class="form-group">
+                <input type="password" class="form-control" placeholder="Password" required="required" name="password" id="password">
+            </div>
+            <div class="form-group">
+                <input type="password" class="form-control" placeholder="Re-enter Password" required="required" name="cfm_password" id="cfm_password">
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary btn-block">Sign Up</button>
+            </div>
+        </form>
+        <div class="text-center">Already have an account? <a href="/login"> Log in Here.</a></div>
+    </div>
+</body>
+</html>
